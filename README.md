@@ -43,6 +43,7 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 - name: VARCHAR(255) - NOT NULL
 - lastname: VARCHAR(255) - NOT NULL
 - email: VARCHAR(255) NOT NULL - UNIQUE
+- id_corso (FK, BIGINT) - NOT NULL
 
 ## Table name: `studenti`
 
@@ -62,7 +63,7 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 - id (BIGINT) - primary key - auto_increment - NOT NULL
 - id_corso (FK, int)
-- id_data: (FK, int)
+- data: (date)
 - name: VARCHAR(255) - NOT NULL
 
 # Tabelle ponte
@@ -73,9 +74,9 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 - id (BIGINT) - primary key - auto_increment - NOT NULL
 - id_corso (FK, BIGINT) - NOT NULL
-- id_data: (FK, BIGINT) - NOT NULL
+- data: (date) - NOT NULL
 - id_studente: (FK, BIGINT) - NOT NULL
-- id_voto: (FK, tinyint) - NOT NULL
+- voto: (FK, tinyint) - NOT NULL
 
 ## Table name: `corsi_insegnanti`
 
