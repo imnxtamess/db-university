@@ -1,0 +1,32 @@
+SELECT * 
+FROM `students`
+WHERE `date_of_birth` LIKE "1990%";
+
+/*SELECT * 
+FROM `courses`
+WHERE `cfu` > "10"*/
+
+SELECT *
+FROM `students`
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30
+
+/*SELECT *
+FROM `courses`
+WHERE `year` = 1
+AND `period` = "I semestre"*/
+
+/*SELECT *
+FROM `exams`
+WHERE HOUR(`hour`) > "13:00"
+AND date = "2020-06-20"*/
+
+/*SELECT *
+FROM `degrees`
+WHERE `name` LIKE "Corso di Laurea Magistrale%"*/
+
+/*SELECT *
+FROM `departments`*/
+
+/*SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL*/
