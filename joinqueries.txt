@@ -74,3 +74,14 @@ JOIN `exams` ON `exam_student`.`exam_id` = `exams`.`id`
 JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
 WHERE `exam_student`.`vote` >= 18
 GROUP BY `student_id` , `course_name`
+
+1. Contare quanti iscritti ci sono stati ogni anno
+SELECT YEAR(`students`.`enrolment_date`), COUNT(`id`)
+FROM `students`
+GROUP BY YEAR(`students`.`enrolment_date`)
+
+2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT `teachers`.`office_address`, COUNT(`id`)
+FROM `teachers`
+GROUP BY `teachers`.`office_address`
+*/
